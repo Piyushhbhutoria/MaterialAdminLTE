@@ -7,7 +7,10 @@ Thumbs.db
 /node_modules/
 /bower_components/
 /nbproject/
-static_server.js
-*.php
+/gh-pages/
 .idea
-package-lock.json
+/package-lock.json
+gulpfile.js_*
+/build
+/dist
+/*.html

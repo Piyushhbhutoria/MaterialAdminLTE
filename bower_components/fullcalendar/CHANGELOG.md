@@ -1,4 +1,86 @@
 
+v4.3.0 (2019-08-09)
+-------------------
+
+- HTML/CSS for timeline events has been refactored. BREAKING CHANGE if customized CSS.
+- timeline event titles sometimes overflow outside of element when time (#4928)
+- eventStartEditable false is not compatible with eventResourceEditable true (#4930)
+- calling Calendar::render after initial render causes bad sizing (#4718, #4723)
+- when list views destroyed, wouldn't call eventDestroy (#4727)
+- solve JS errors when switching views and using showNonCurrentDates (#4677, #4767)
+- prevent unnecessary scrollbars from appearing in daygrid views (4624, #4732)
+- draggedEvent start time is null in eventAllow when switching resources (#4932)
+- scrollToTime method honors a whole duration, not just a time (#4935)
+- some background events wouldn't recieve eventClick or hovering (#3148, #4750)
+- fix infinite recursion when custom view type is itself (#4198)
+- respect firstDay setting when weekNumberCalculation set to ISO (#4734)
+- fix typo in Danish (#4708)
+- adjust typescript def for setExtendedProp (#4679)
+- googleCalendarApiKey added to typescript options definition (#4772)
+- moment/luxon formatting same-day range with dash (#4686)
+- error importing moment plugin into typescript project (#4691, #4680, #4580)
+- refs to sourcemaps removed from dist (accidentally included in previous version)
+- distributing an ESM file, referenced by package.json's `module`
+- using a more portable SASS (#4626, #4651, #4671)
+
+
+v4.2.0 (2019-06-02)
+-------------------
+
+- fix recurring event expansion when event starts before view and has duration (#4617, #4635)
+- simple event recurring now allows a duration property on the event object
+- internal Calendar::setOptions method removed (never meant to be public)
+
+
+v4.1.0 (2019-04-24)
+-------------------
+
+- scrollToTime method (#467)
+- ISO8601 datetime strings with no 'T' not parsed in Safari (#4610)
+- all-day dropped events after third not being draggable (#4616)
+- dateClick/selecting sometime report wrong dates after calendar resize (#4608)
+- js error when using navLinks with header=false (#4619)
+- js error when more+ link and multiple async event sources (#4585)
+- timeGridEventMinHeight is not defined in OptionsInput interface (#4605)
+- Interdependent package semvers with carrot, use tilde (#4620)
+- dayRender now called for day columns in timeGrid views
+
+
+v4.0.2 (2019-04-03)
+-------------------
+
+Bugfixes:
+- eventAllow and constraints not respected when dragging event between calendars
+- viewSkeletonRender now in typedefs (#4589)
+- invalid draggedEvent properties in eventAllow for external dnd (#4575)
+- forceEventDuration not working with external dnd (#4597)
+- rrule displaying time when allDay is true (#4576)
+- rrule events not displaying at interval start (#4596)
+- prev button not initially working when starting on 31st of a month (#4595)
+- clicking X in popover generating a dayClick (#4584)
+- locale file used as single script tag not affecting calendar locale (#4581)
+- header "today" button not translated for pt and pt-br (#4591)
+- fa locale typo (#4582)
+
+
+v4.0.1 (2019-03-18)
+-------------------
+
+Read about all the changes in v4:
+https://fullcalendar.io/docs/upgrading-from-v3
+
+Obscure breaking changes from v3->v4 not mentioned elsewhere:
+- `touchMouseIgnoreWait` moved to `(packageRoot).config.touchMouseIgnoreWait`
+- `dataAttrPrefix` moved to `(packageRoot).config.dataAttrPrefix`
+
+Advancements since latest prerelease:
+- New styling for buttons and icons in header. New styling for events.
+- Bugfixes: #4539, #4503, #4534, #4505, #4477, #4467, #4454, #4458, #4483,
+  #4517, #4506, #4435, #4498, #4497, #4446, #4432, #4530
+
+NOTE: version "4.0.0" was skipped because of an NPM publishing error
+
+
 v3.10.0 (2019-01-10)
 --------------------
 
